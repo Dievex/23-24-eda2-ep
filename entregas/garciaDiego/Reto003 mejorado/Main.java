@@ -125,7 +125,8 @@ public class Main {
             System.out.println("\nAuthor-Document Relationship Management:");
             System.out.println("\u001B[36m1. Add Author-Document Relationship\u001B[0m");
             System.out.println("\u001B[36m2. List Author-Document Relationships\u001B[0m");
-            System.out.println("\u001B[33m3. Back to Main Menu\u001B[0m");
+            System.out.println("\u001B[36m3. Delete Author-Document Relationship\u001B[0m");
+            System.out.println("\u001B[33m4. Back to Main Menu\u001B[0m");
             System.out.print("\u001B[32mSelect an option: \u001B[0m");
             int option = sc.nextInt();
             sc.nextLine();
@@ -145,14 +146,14 @@ public class Main {
                     management.listAuthorDocumentRelationships();
                     break;
                 case 3:
-                    return;
-                case 5:
                     System.out.println("Enter the author ID:");
                     int author_Id = sc.nextInt();
                     System.out.println("Enter the document ID:");
                     int document_Id = sc.nextInt();
                     management.deleteRelationship(document_Id, author_Id);
                     break;
+                case 4:
+                    return;
                 default:
                     System.out.println("Invalid option. Please try again.");
             }
